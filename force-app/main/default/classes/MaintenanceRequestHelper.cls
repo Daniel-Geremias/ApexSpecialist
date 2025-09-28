@@ -48,9 +48,6 @@ public with sharing class MaintenanceRequestHelper {
                 if (maintenanceCycles.containskey(cc.Id)) {
                     nc.Date_Due__c = Date.today().addDays((Integer) maintenanceCycles.get(cc.Id));
                 }
-                else {
-                    nc.Date_Due__c = Date.today().addDays((Integer) cc.Equipment__r.maintenance_Cycle__c);
-                }
                 
                 newCases.add(nc);
             }
